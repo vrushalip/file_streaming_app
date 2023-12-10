@@ -1,0 +1,16 @@
+<script>
+  let source = new EventSource('/live_file_streams/log_file');
+
+  source.onopen = (event) => {
+      console.log("The connection has been opened!", event);
+  }
+
+  source.onmessage = (event) => {
+    const target = document.getElementById('target')
+    target.append(event.data, document.createElement("p"))
+  }
+</script>
+
+<h1>live_file_streams#Index</h1>
+
+<div id="target"></div>

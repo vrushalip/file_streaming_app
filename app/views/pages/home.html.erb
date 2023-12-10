@@ -1,0 +1,24 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+<div id="target">
+<%
+=begin%>
+ <% @lines.each do |line| %>
+  <p><%= line %></p>
+<% end%> 
+<%
+=end%>
+</div>
+<script>
+  // let source = new EventSource('/live_file_streams/log_file');
+
+  // source.onopen = (event) => {
+  //     console.log("The connection has been opened!", event);
+  // }
+
+  // source.onmessage = (event) => {
+  //     console.log("The message has been received!", event);
+  //     const target = document.getElementById('target')
+  //     target.append(event.data, document.createElement("p"))
+  // }
+</script>
